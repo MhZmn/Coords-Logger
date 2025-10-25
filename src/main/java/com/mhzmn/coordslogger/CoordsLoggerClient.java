@@ -22,8 +22,8 @@ public class CoordsLoggerClient implements ClientModInitializer {
         Category customCategory = Category.create(Identifier.of("coords-logger", "controls"));
         logCordsKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.coords-logger.log_coordinates",
-                InputUtil.Type.SCANCODE,
-                GLFW.GLFW_KEY_K,
+                InputUtil.Type.KEYSYM,
+                -1,
                 customCategory
         ));
 
