@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "coords-logger",
+	"version": "${version}",
+	"name": "Coords Logger",
+	"description": "A Simple Mod That Privately Logs Coords In Chat (Only Visible To Your Player)",
+	"authors": [
+		"MhZmn"
+	],
+	"contact": {
+		"homepage": "https://mhzmn.com/",
+		"sources": "https://github.com/MhZmn/Coords-Logger"
+	},
+	"license": "MIT",
+	"icon": "assets/coords-logger/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.mhzmn.coordslogger.CoordsLogger"
+		],
+    "client": [
+      "com.mhzmn.coordslogger.CoordsLoggerClient"
+    ],
+		"fabric-datagen": [
+			"com.mhzmn.coordslogger.CoordsLoggerDataGenerator"
+		]
+	},
+	"mixins": [
+		"coords-logger.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.3",
+		"minecraft": "~1.21.10",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
